@@ -1,8 +1,12 @@
 const express = require('express');
+const { dbConnection } = require('./database/config');
 require('dotenv').config();
 
 // Create server 
 const app = express();
+
+// Data base
+dbConnection();
 
 // Midalweares
 app.use(express.static('public'));
