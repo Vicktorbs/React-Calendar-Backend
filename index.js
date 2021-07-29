@@ -5,15 +5,11 @@ require('dotenv').config();
 const app = express();
 
 // Midalweares
-app.use(express.static('public'))
+app.use(express.static('public'));
+app.use(express.json());
 
 // Rroutes
-// app.get('/', (req, res) => {
-//     console.log('/ required');
-//     res.json({
-//         ok: true
-//     })
-// })
+app.use('/api/auth', require('./routes/auth'));
 
 // Listener 
 app.listen(process.env.PORT, () => {
