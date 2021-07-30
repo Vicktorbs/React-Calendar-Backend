@@ -18,6 +18,7 @@ app.use(express.json());
 
 // Rroutes
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/events', require('./routes/events'));
 
 // Listener 
 app.listen(process.env.PORT, () => {
